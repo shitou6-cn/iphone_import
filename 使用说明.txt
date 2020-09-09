@@ -1,0 +1,19 @@
+Java爬虫http://www.1234i.com/ 处理后输出sql文件
+
+引入
+1.引项目：当前文件夹import
+2.引依赖包：当前文件lib
+3.start类中需要改两个地址 cityPath：当前目录下的chengshi.txt; capitalPath:当前目录下的sheng.txt
+
+运行
+1.改start类中main方法中 factory.Factory1 前两个传入的参数 （看注释）为要查询的号段轮训
+例： factory.Factory1(136,10,cityPath,capitalPath,sql); //查询136考段开始10个
+2.修改sql输出路径 局部变量名字：sql
+
+调试：
+1.Factory 工厂类 
+2.DoPost 发送post请求 爬到值
+3.Manager 将爬虫爬到的值 截取后拼接为sql语句
+4.Input 在本地目录输出sql文件
+5.String1 工具类 自定义截取方法
+6.StringSet 工具类 输入开始和数字  返回String集合  例如 StringSet(163,10000) 返回 1630000~1639999
